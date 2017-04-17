@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd325ffa5f463d97521c6abf5dea258e",
+    "content-hash": "fe9d7d7e3efb7e5d79a0dd01843848bb",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -236,16 +236,16 @@
         },
         {
             "name": "radowoj/searcher",
-            "version": "v0.2.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/radowoj/searcher.git",
-                "reference": "c8d0fd35b7c7ae4f5d440fe45b16c1c2cafbfaeb"
+                "reference": "8e013da56621641b1986fdc4e5b163d96a9e6695"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/radowoj/searcher/zipball/c8d0fd35b7c7ae4f5d440fe45b16c1c2cafbfaeb",
-                "reference": "c8d0fd35b7c7ae4f5d440fe45b16c1c2cafbfaeb",
+                "url": "https://api.github.com/repos/radowoj/searcher/zipball/8e013da56621641b1986fdc4e5b163d96a9e6695",
+                "reference": "8e013da56621641b1986fdc4e5b163d96a9e6695",
                 "shasum": ""
             },
             "require": {
@@ -272,7 +272,7 @@
                 }
             ],
             "description": "Unified search API with drivers for Bing and Google",
-            "time": "2017-04-17T13:03:49+00:00"
+            "time": "2017-04-17T14:17:32+00:00"
         }
     ],
     "packages-dev": [

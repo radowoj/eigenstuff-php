@@ -94,7 +94,7 @@ class Scraper
 
             $sum += $result->totalCount();
 
-            echo "Asked for {$query}, got {$sum} results" . PHP_EOL;
+            echo "Asked for {$query}, got {$result->totalCount()} results" . PHP_EOL;
 
             usleep($this->queryIntervalUsec);
         }

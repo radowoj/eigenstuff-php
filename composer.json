@@ -3,7 +3,7 @@
     "description": "PHP implementation of erikbern/eigenstuff - basically a toy tool to predict the future from result counts of Google (and other) Web searches.",
     "type": "project",
     "require": {
-        "radowoj/searcher": "^0.2.0"
+        "radowoj/searcher": "^0.3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.1"
