@@ -2,3 +2,5 @@
 /coverage/
 /examples/config.php
 /examples/results.html
+/examples/results.md
+/examples/results-cache.php

@@ -1,0 +1,11 @@
+<?php /*
+    Ugly as hell, but works :P. Neat view file for markdown isn't a priority in this project.
+*/?>&nbsp; <?php foreach(array_keys($results) as $item):?> | to: **<?=$item?>**<?php endforeach;?>
+
+<?php echo implode(' | ', array_fill(0, 1 + count(array_keys($results)), '---'));?>
+<?php foreach($results as $fromItem => $toItemsArray):?>
+
+from: **<?= $fromItem ?>** <?php foreach($toItemsArray as $toItem => $count): ?>
+    <?php if ($toItem === $fromItem): ?> | - <?php else:?>| <?= $count; ?> <?php endif;?>
+<?php endforeach;?>
+<?php endforeach;?>

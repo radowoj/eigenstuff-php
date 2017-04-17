@@ -49,13 +49,12 @@ $results = (new Scraper($searcher))
 
     ->scrape();
 
-$results = require('results.php');
-$html = (new HtmlResult($results))->render();
-file_put_contents('results.html', $html);
+$markdown = (new ResultRenderer('result-markdown.phtml', $results))->render();
+file_put_contents('results.md', $markdown);
 
 ```
 
-## Above example will yield a results.html file similar to:
+## Above example will yield a results.md file similar to:
 
 &nbsp; | **to: Magento** | **to: WooCommerce** | **to: Prestashop** | **to: Shopify** | **to: VirtueMart** | **to: Zen Cart** | **to: osCommerce**
 --- | --- | --- | --- | --- | --- | --- | ---
@@ -65,7 +64,7 @@ from: Prestashop |	71 |	53 |	- |	14 |	35 |	1 |	29
 from: Shopify |	73 |	59 |	39 |	- |	1 |	0 |	0
 from: VirtueMart |	58 |	29 |	78 |	1 |	- |	13 |	41
 from: Zen Cart |	49 |	43 |	4397 |	19 |	54 |	- |	54
-from: osCommerce |	108 |	57 |	66 |	24 |	50 |	45 |	- 
+from: osCommerce |	108 |	57 |	66 |	24 |	50 |	45 |	-
 
 
 That's it for now, eigenvalues calculations & predictions will be added soon (I hope).

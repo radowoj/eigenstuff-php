@@ -2,13 +2,15 @@
 
 namespace Radowoj\Eigenstuff;
 
-class HtmlResult
+class ResultRenderer
 {
     protected $results = [];
 
+    protected $template = null;
 
-    public function __construct(array $results)
+    public function __construct(string $template, array $results)
     {
+        $this->template = $template;
         $this->results = $results;
     }
 
@@ -17,7 +19,7 @@ class HtmlResult
     {
         extract(['results' => $this->results]);
         ob_start();
-        include('html-result.phtml');
+        include($this->template);
         return ob_get_clean();
     }
 

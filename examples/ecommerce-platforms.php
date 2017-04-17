@@ -7,7 +7,7 @@ use Radowoj\Searcher\SearchProvider\Bing;
 use Radowoj\Searcher\SearchProvider\Google;
 use Radowoj\Searcher\Searcher;
 use Radowoj\Eigenstuff\Scraper;
-use Radowoj\Eigenstuff\HtmlResult;
+use Radowoj\Eigenstuff\ResultRenderer;
 
 $client = new GuzzleClient();
 
@@ -46,6 +46,16 @@ $results = (new Scraper($searcher))
 
     ->scrape();
 
-$results = require('results.php');
-$html = (new HtmlResult($results))->render();
+/*
+//cache results for later
+file_put_contents('results-cache.php', "<?php return " . var_export($results, 1) . ';');
+
+//load results from cache
+$results = require('results-cache.php');
+*/
+
+$html = (new ResultRenderer('result-html.phtml', $results))->render();
 file_put_contents('results.html', $html);
+
+$markdown = (new ResultRenderer('result-markdown.phtml', $results))->render();
+file_put_contents('results.md', $markdown);
